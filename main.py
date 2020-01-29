@@ -1,13 +1,10 @@
 import requests as rq
-import re
 numbers=[]
 
 with open('dataset_24476_3.txt','r') as f:
   for i in f:
     numbers.append(int(i))
   f.close()
-
-reg=r'boring'
 
 for i in numbers:
   api_url = 'http://numbersapi.com/' + str(i) + '/' + 'math'
@@ -26,7 +23,7 @@ for i in numbers:
       f1.write('Interesting'+'\n')
     else:
       f1.write('Boring'+'\n')
-      
+
 f1.close()    
   
   
